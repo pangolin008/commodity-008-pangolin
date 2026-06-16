@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMODITY No. 008 : PANGOLIN</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #0d0d0d;
+            color: #f4f4f4;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+        .wrapper {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 24px;
+            background-color: #0d0d0d;
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+        h1, h2, .quote-main {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+        .quote-main {
+            font-size: 26px;
+            font-style: italic;
+            max-width: 440px;
+            margin-bottom: 20px;
+        }
+        .quote-sub {
+            font-size: 15px;
+            color: #a0a0a0;
+            max-width: 400px;
+            line-height: 1.6;
+        }
+        h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .content-text {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #c5c5c5;
+            max-width: 440px;
+            margin-bottom: 16px;
+        }
+        .nav-container {
+            margin-top: 40px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            width: 100%;
+        }
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: transparent;
+            color: #f4f4f4;
+            border: 1px solid rgba(244, 244, 244, 0.3);
+            padding: 12px 28px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .btn:hover, .btn:active {
+            border-color: rgba(244, 244, 244, 1);
+            background-color: rgba(244, 244, 244, 0.05);
+        }
+
+        /* TAMPILKAN SLIDE 1 SEBAGAI DEFAULT SAAT PEMBACA PERTAMA DATANG */
+        #slide-1 {
+            opacity: 1;
+            z-index: 5;
+            pointer-events: auto;
+        }
+        /* JIKA ADA SLIDE LAIN YANG DIKLIK (DI-TARGET), MAKA TAMPILKAN */
+        .slide:target {
+            opacity: 1;
+            z-index: 10;
+            pointer-events: auto;
+        }
+        /* SOLUSI AMAN: KARENA SLIDE 1 SEKARANG DI BAWAH, KODE INI AKAN BERHASIL MEMAKSA SLIDE 1 SEMBUNYI */
+        .slide:target ~ #slide-1 {
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <!-- Slide 2 -->
+        <div class="slide" id="slide-2">
+            <p class="quote-main">"Benteng terkuatnya tidak pernah gagal."</p>
+            <p class="quote-sub">Ia hanya tak pernah dirancang untuk menghadapi manusia.</p>
+            <div class="nav-container">
+                <a href="#" class="btn">&larr; Back</a>
+                <a href="#slide-3" class="btn">Continue &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" id="slide-3">
+            <h2>Dalam Kesunyian</h2>
+            <p class="content-text">Banyak yang mengenal gajah.</p>
+            <p class="content-text">Banyak yang mengenal harimau.</p>
+            <p class="content-text">Banyak yang mengenal orangutan.</p>
+            <p class="content-text">Namun hanya sedikit yang mengenal trenggiling.</p>
+            <p class="content-text">Padahal ia adalah salah satu mamalia yang paling banyak di perdagangkan di dunia.</p>
+            <p class="content-text">Dan bahkan dalam penderitaanya.</p>
+            <p class="content-text">Ia tetap hidup dalam kesunyian.</p>
+            <p class="content-text">Namanya jarang menjadi berita utama.</p>
+            <p class="content-text">Wajahnya jarang menghiasi kampamye.</p>
+            <p class="content-text">Ia hampir menghilang sebelum sempat dikenal.</p>
+            <p class="content-text">Mungkin tragedi yang paling sunyi bukanlah ketika sebuah kehidupan berakhir.</p>
+            <p class="content-text">Melainkan ketika ia menghilang sebelum dunia sempat mengenal namanya.</p>
+            <div class="nav-container">
+                <a href="#slide-2" class="btn">&larr; Back</a>
+                <a href="#slide-4" class="btn">Continue &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide" id="slide-4">
+            <h2>Ia Tidak Lari</h2>
+            <p class="content-text">Ia tidak lari.</p>
+            <p class="content-text">Ia tidak nelawan.</p>
+            <p class="content-text">Ia tidak menggigit.</p>
+            <p class="content-text">Ia hanya melakukan apa yang telah menjaganya selama ini.</p>
+            <p class="content-text">Dan manusia mengetahui itu.</p>
+            <div class="nav-container">
+                <a href="#slide-3" class="btn">&larr; Back</a>
+                <a href="#slide-5" class="btn">Continue &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide" id="slide-5">
+            <h2>Siapa yang Sedang Anda Lihat?</h2>
+            <p class="content-text">Sebelum menjadi komoditas.</p>
+            <p class="content-text">Ia adalah seekor trenggiling.</p>
+            <p class="content-text">Satu-satunya mamalia bersisik di dunia.</p>
+            <p class="content-text">Mahluk pemalu yang lebih sering menghabiskan malamnya dalam kesunyian, mencari semut dan rayap,serta nenghindari konflik sebisa mungkin.</p>
+            <p class="content-text">Ia tidak hidup berkelompok.</p>
+            <p class="content-text">Ia tidak memiliki suara yang menggetarkan hutan.</p>
+            <p class="content-text">Ia hanya menjalani kehidupannya dengan tenang.</p>
+            <p class="content-text">Dan selama itu,</p>
+            <p class="content-text">sisik serta nalurinya telah cukup untuk melindunginya dari pemangsa.</p>
+            <p class="content-text">Namun tidak ada dalam sejarah evolusinya yang mempersiapkannya untuk menghadapi nmanusia.</p>
+            <div class="nav-container">
+                <a href="#slide-4" class="btn">&larr; Back</a>
+                <a href="#slide-6" class="btn">Continue &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide" id="slide-6">
+            <h2>Lalu Manusia Datang</h2>
+            <p class="content-text">Selama jutaan tahun,</p>
+            <p class="content-text">ia hanya perlu takut pada mereka yang ingin memangsanya.</p>
+            <p class="Continue">Namun manusia tidak datang untuk bertahan hidup.</p>
+            <p class="content-text">Manusia datang dengan harga.</p>
+            <p class="content-text">Dan untuk pertama kalinya.</p>
+            <p class="content-text">benteng yang selalu menjaganya tidak lagi cukup.</p>
+            <p class="content-text">Ia hanya mempercayakan hidupnya pada naluri yang telah diwariskan kepadanya.</p>
+            <p class="content-text">Dan tanpa pernah ia ketahui,</p>
+            <p class="content-text">tangan yang mengangkatnya bukanlah tangan yang lapar,</p>
+            <p class="content-text">melainkan tangan yang telah memberi harga pada hidupnya.</p>
+            <div class="nav-container">
+                <a href="#slide-5" class="btn">&larr; Back</a>
+                <a href="#slide-7" class="btn">Continue &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide" id="slide-7">
+            <h2>Ketika Benteng Menjadi Komoditas</h2>
+            <p class="content-text">Dagingnya dimakan.</p>
+            <p class="content-text">Sisiknya diperdagangkan.</p>
+            <p class="content-text">Tubuhnya diberi harga.</p>
+            <p class="content-text">Makhluk yang seharusnya hidup di hutan perlahan berubah menjadi komoditas.</p>
+            <p class="content-text">Yang dicari bukan kehidupannya.</p>
+            <p class="content-text">Melainkan apa yang dapat diambil darinya.</p>
+            <p class="content-text">Dan ketika nilai kehidupan digantikan oleh nilai pasar,</p>
+            <p class="content-text">bahkan benteng terkuat pun tidak lagi berarti.</p>
+            <div class="nav-container">
+                <a href="#slide-6" class="btn">&larr; Back</a>
+                <a href="#slide-8" class="btn">Continue &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide" id="slide-8">
+            <h2>Jejak yang Menghilang</h2>
+            <p class="content-text">Selama beberapa dekade,</p>
+            <p class="content-text">berbagai spesies trenggiling mengalami penurunan populasi akibat perburuan dan perdagangan ilegal.</p>
+            <p class="content-text">Hutan perlahan kehilangan salah satu penghuninya.</p>
+            <p class="content-text">Dan banyak manusia bahkan belum sempat mengenal namanya.</p>
+            <p class="content-text">Bukan karena ia tidak penting.</p>
+            <p class="content-text">Tetapi karena kehilangan yang paling sunyi sering kali terjadi tanpa banyak perhatian.</p>
+            <p class="content-text">Mereka menghilang.</p>
+            <p class="content-text">Sementara dunia terus berjalan.</p>
+            <div class="nav-container">
+                <a href="#slide-7" class="btn">&larr; Back</a>
+                <a href="#slide-9" class="btn">Continue &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="slide" id="slide-9">
+            <h2>Masih Ada Harapan</h2>
+            <p class="content-text">Masih ada orang-orang yang berjuang untuk mereka.</p>
+            <p class="content-text">Masih ada para penjaga hutan.</p>
+            <p class="content-text">Masih ada pusat rehabilitasi.</p>
+            <p class="content-text">Masih ada para peneliti, relawan, dan organisasi konservasi yang percaya bahwa makhluk ini pantas untuk tetap hidup.</p>
+            <p class="content-text">Harapan itu masih ada.</p>
+            <p class="content-text">Selama manusia masih memilih untuk peduli.</p>
+            <div class="nav-container">
+                <a href="#slide-8" class="btn">&larr; Back</a>
+                <a href="#slide-10" class="btn">Continue &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="slide" id="slide-10">
+            <h2>Tentang Karya Ini</h2>
+            <p class="content-text">Barcode biasanya digunakan untuk mengenali barang.</p>
+            <p class="content-text">Dalam karya ini, barcode justru mengungkap kisah kehidupan yang tersembunyi di balik sebuah komoditas.</p>
+            <p class="content-text">Trenggiling digambarkan dalam posisi melingkar, sebuah mekanisme pertahanan yang telah menjaganya selama jutaan tahun.</p>
+            <p class="content-text">Posisi yang sama yang justru membuatnya semakin mudah diambil oleh manusia.</p>
+            <p class="content-text">Papan barcode yang melekat pada tubuhnya menjadi simbol bagaimana kehidupan dapat berubah menjadi sesuatu yang diberi harga.</p>
+            <p class="content-text">Karya ini tidak dibuat untuk menunjukkan seekor hewan yang lemah.</p>
+            <p class="content-text">Karya ini dibuat untuk mengingatkan bahwa tragedi tidak selalu terjadi karena benteng itu runtuh.</p>
+            <p class="content-text">Kadang, tragedi terjadi ketika benteng itu tetap berdiri,</p>
+            <p class="content-text">namun tidak pernah dirancang untuk menghadapi manusia.</p>
+            <div class="nav-container">
+                <a href="#slide-9" class="btn">&larr; Back</a>
+                <a href="#slide-11" class="btn">Continue &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="slide" id="slide-11">
+            <h2>Terima Kasih</h2>
+            <p class="content-text">Terima kasih telah memindai barcode ini.</p>
+            <p class="content-text">Biasanya sebuah barcode membawa kita pada harga.</p>
+            <p class="content-text">Kali ini,</p>
+            <p class="content-text">ia membawa kita pada sebuah kehidupan.</p>
+            <p class="content-text">Dan mungkin,</p>
+            <p class="content-text">itu sudah cukup untuk mengingatkan kita bahwa tidak semua yang dapat diberi nilai,</p>
+            <p class="content-text">seharusnya diperlakukan sebagai barang.</p>
+            <div class="nav-container">
+                <a href="#slide-10" class="btn">&larr; Back</a>
+            </div>
+        </div>
+
+        <!-- Slide 1 (Cover) - SEKARANG DIPINDAH KE PALING BAWAH AGAR TRANSISI LANCAR -->
+        <div class="slide" id="slide-1">
+            <h1 style="font-size: 34px; letter-spacing: 2px; font-weight: 600; max-width: 90%; margin-bottom: 6px;">COMMODITY No. 008 : PANGOLIN</h1>
+            <p style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 18px; color: #8a8a8a; letter-spacing: 1px; margin-bottom: 12px;">series</p>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; color: #c5c5c5; margin-bottom: 40px;">The Silent Victim</p>
+            <div class="nav-container">
+                <a href="#slide-2" class="btn">Continue &rarr;</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+>
+
